@@ -1,0 +1,11 @@
+--- omnibus-1.1.0/lib/omnibus/project.rb~	2013-06-17 23:06:28.000000000 +0300
++++ omnibus-1.1.0/lib/omnibus/project.rb	2013-06-17 23:14:37.517491627 +0300
+@@ -559,7 +559,7 @@
+ 
+     # TODO: what's this do?
+     def makeself_command
+-      command_and_opts = [ File.expand_path(File.join(Omnibus.source_root, "bin", "makeself.sh")),
++      command_and_opts = [ File.expand_path(File.join(Omnibus.source_root, "makeself.sh")),
+                            "--gzip",
+                            install_path,
+                            output_package("makeself"),
