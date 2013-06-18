@@ -12,6 +12,7 @@ Group:		Development/Languages
 Source0:	http://rubygems.org/downloads/%{pkgname}-%{version}.gem
 # Source0-md5:	4ae9235161a1553a87abca21f6672414
 Patch0:		makeself-path.patch
+Patch1:		omnibus-pld.patch
 URL:		https://github.com/opscode/omnibus-ruby
 BuildRequires:	rpm-rubyprov
 BuildRequires:	rpmbuild(macros) >= 1.656
@@ -40,6 +41,7 @@ Omnibus helps you build self-installing, full-stack software builds.
 %setup -q -n %{pkgname}-%{version}
 %{__sed} -i -e '1 s,#!.*ruby,#!%{__ruby},' bin/*
 %patch0 -p1
+%patch1 -p1
 
 # move these to libdir, so they don't clobber system bin dir
 chmod a-x bin/makeself*

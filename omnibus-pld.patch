@@ -1,0 +1,11 @@
+--- omnibus-1.0.4/lib/omnibus/project.rb~	2013-06-18 07:55:54.271908772 +0300
++++ omnibus-1.0.4/lib/omnibus/project.rb	2013-06-18 23:35:30.835312107 +0300
+@@ -374,7 +374,7 @@
+       case platform_family
+       when 'debian'
+         [ "deb" ]
+-      when 'fedora', 'rhel'
++      when 'fedora', 'rhel', 'pld'
+         [ "rpm" ]
+       when 'solaris2'
+         [ "solaris" ]
