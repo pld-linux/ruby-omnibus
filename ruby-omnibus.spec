@@ -40,8 +40,8 @@ Omnibus helps you build self-installing, full-stack software builds.
 %prep
 %setup -q -n %{pkgname}-%{version}
 %{__sed} -i -e '1 s,#!.*ruby,#!%{__ruby},' bin/*
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 
 # move these to libdir, so they don't clobber system bin dir
 chmod a-x bin/makeself*
